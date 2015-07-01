@@ -1,6 +1,6 @@
-#include "utils.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "utils.h"
 
 void printIntArray(int a[], int arrayLength){
 		int i;

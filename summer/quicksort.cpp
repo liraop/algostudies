@@ -1,7 +1,7 @@
-#include "quicksort.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "quicksort.h"
 #include "utils.h"
 
 void quicksort(int array[], int startIndex, int arrayLength){
