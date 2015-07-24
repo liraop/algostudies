@@ -1,0 +1,1 @@
+% time,culmulative seconds,self seconds,calls,self ms/call,total ms/call,name100.24,0.02,0.02,2,10.02,10.02,"quicksort(int*,int,int)"0,0.02,0,1,0,20.05,tstQuicksort()0,0.02,0,1,0,0,tstQsort()

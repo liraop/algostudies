@@ -1,0 +1,5 @@
+%,cumulative,self,self,total,,
+time,seconds,seconds,calls,ms/call,ms/call,name
+100.24,0.02,0.02,2,10.02,10.02,quicksort(int*,
+0.00,0.02,0.00,1,0.00,20.05,tstQuicksort()
+0.00,0.02,0.00,1,0.00,0.00,tstQsort()

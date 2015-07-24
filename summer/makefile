@@ -1,16 +1,19 @@
 all: run
 
-main.o: main.cpp
-	gcc -pg -c main.cpp
+main.o : main.cpp
+	g++ -pg -c main.cpp
 
-quicksort.o: quicksort.cpp
-	gcc -pg -c quicksort.cpp
+Tester.o: Tester.cpp
+	g++ -pg -c Tester.cpp
+
+MyQuickSort.o: MyQuickSort.cpp
+	g++ -pg -c MyQuickSort.cpp
 
 utils.o: utils.cpp
-	gcc -pg -c utils.cpp
+	g++ -pg -c utils.cpp
 
-run: main.o quicksort.o utils.o
-	gcc -pg main.o quicksort.o utils.o -o run 
+run: Tester.o MyQuickSort.o utils.o main.o
+	g++ -pg Tester.o MyQuickSort.o utils.o main.o -o run
 
 clean:
-	rm main.o quicksort.o utils.o run
+	rm Tester.o MyQuickSort.o utils.o main.o run
