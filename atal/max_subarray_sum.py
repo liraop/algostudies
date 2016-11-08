@@ -2,7 +2,7 @@ def max_subarray_sum_trivial(a):
     max_sum = 0
 
     for i in range(0, len(a)):
-        for j in range(0, len(a)):
+        for j in range(i, len(a)+1):
             sum = 0
             for k in range(i, j):
                 sum += a[k]
@@ -27,6 +27,10 @@ def max_subarray_sum_improved(a):
 
 
 a = [1, -2, 1, 2, -5, -5, -6, 1]
+b = [1, -2, -4, 5, 6]
 
 max_subarray_sum_trivial(a)
 max_subarray_sum_improved(a)
+
+max_subarray_sum_trivial(b)
+max_subarray_sum_improved(b)
