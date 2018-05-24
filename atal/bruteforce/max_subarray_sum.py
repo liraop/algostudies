@@ -8,7 +8,7 @@ def max_subarray_sum_trivial(a):
                 sum += a[k]
                 if sum > max_sum:
                     max_sum = sum
-    print(max_sum)
+    return max_sum
 
 
 def max_subarray_sum_improved(a):
@@ -23,14 +23,12 @@ def max_subarray_sum_improved(a):
             else:
                 i += 1
 
-    print(previous_sum)
+    return previous_sum
 
 
 a = [1, -2, 1, 2, -5, -5, -6, 1]
 b = [1, -2, -4, 5, 6]
 
-max_subarray_sum_trivial(a)
-max_subarray_sum_improved(a)
+print(max_subarray_sum_trivial(a) == max_subarray_sum_improved(a))
 
-max_subarray_sum_trivial(b)
-max_subarray_sum_improved(b)
+print(max_subarray_sum_trivial(b) == max_subarray_sum_improved(b))
