@@ -10,24 +10,24 @@ def comparaString(s1, s2):
             return False
         else:
             falta = 0
-            if (diferenca == 1): falta += 1
+            if (diferenca == 1): falta += 1 			## se precisar inserir uma
  
-            for i in range(0, min(len(s1),len(s2))):
-                if (s1[i] != s2[i]): falta += 1
- 
+            for i in range(0, min(len(s1),len(s2))): 
+                if (s1[i] != s2[i]): falta += 1 		## se existir alguma diferença
+ 		
             return (falta <= 1)
 
 
 class Testes(unittest.TestCase):
-	def casoBase(self):
+	def test_Base(self):
 		self.assertTrue(comparaString("pele","pele"))
 		self.assertFalse(comparaString("aheuash","aheuasheuas"))
 		
-	def casosPassa(self):
+	def test_Passa(self):
 		self.assertTrue(comparaString("pele","ple"))
 		self.assertTrue(comparaString("pele","bele"))
 
-	def casosFalha(self):
+	def test_Falha(self):
 		self.assertFalse(comparaString("pele","beke"))
 		self.assertFalse(comparaString("pExemplesiae","pele"))
 
