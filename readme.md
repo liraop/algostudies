@@ -1,7 +1,12 @@
 Hub para links, conceitos, aulas, resoluções e qualquer outro tipo de coisa relacionada ao tópico.
 
 # Sumário
+- [Livros](#books)
 - [DFS](#dfs)
+
+### <a name="books"> Livros </a>
+- [Cracking the Code Interview](https://inspirit.net.in/books/placements/Cracking%20the%20Coding%20Interview.pdf)
+- [Competitive Programming](http://www.comp.nus.edu.sg/~stevenha/myteaching/competitive_programming/cp1.pdf)
 
 ### <a name="dfs"> DFS </a> (depth-first search) -- busca em profundidade
 > (...) Lá o objetivo era decidir se um vértice está ao alcance de outro (ou seja, se existe um caminho que vai do segundo vértice ao primeiro).  Aqui, a ênfase é ligeiramente diferente: queremos visitar todos os vértices e numerá-los na ordem em que são descobertos. <br> A busca em profundidade não resolve nenhum problema específico. Ela é apenas um pré-processamento que leva à resolução eficiente de muitos problemas interessantes.  A busca em profundidade nos ajuda a "compreender" o grafo com que estamos lidando, revelando sua "forma" e reunindo informações (representadas pela numeração dos vértices) para a resolução eficiente de muitos problemas. <br>
