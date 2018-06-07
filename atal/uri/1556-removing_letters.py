@@ -1,17 +1,22 @@
-entrada = raw_input()
+# -*- coding: utf-8 -*-
 
-palavra = ""
+def gera_combs(array):
+    candidatos = array[:]
+    combinacoes = ""
+
+    while (candidatos):
+        combinacao = ""
+        for i in range(0, len(candidatos)):
+            combinacao += candidatos[i]
+
+        combinacoes += combinacao
+        combinacoes += ""
+        candidatos.pop()
+
+    return combinacoes
+
+entrada = list("HUEHUE")
+caminhos = []
 
 for i in range(0, len(entrada)):
-    palavra = ""
-    for j in range(0, len(entrada)):
-        for k in range(0, len(entrada)):
-            if ( i == j and j == k):
-                palavra += entrada[i]
-            if (j > i and j <=k):
-                palavra += entrada[j]
-            if (k > j and k > i):
-                palavra += entrada[k]
-
-
-        print(palavra)
+    print(gera_combs(entrada[i:]))
