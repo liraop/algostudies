@@ -1,22 +1,27 @@
 # -*- coding: utf-8 -*-
 
-def gera_combs(array):
-    candidatos = array[:]
-    combinacoes = ""
+def remove_letra(palavra, visitados):
+    candidatos = palavra.copy()
 
     while (candidatos):
-        combinacao = ""
-        for i in range(0, len(candidatos)):
-            combinacao += candidatos[i]
+        if (len(palavra) == 1):
+            visitados.append(palavra[0])
+        else:
+            atual = palavra[0]
+            no = ""
+            for i in range(0, len(candidatos)):
+                no += candidatos[i]
 
-        combinacoes += combinacao
-        combinacoes += ""
+            visitados.append(no)
+            remove_letra(candidatos[1:], visitados)
+
         candidatos.pop()
 
-    return combinacoes
-
-entrada = list("HUEHUE")
-caminhos = []
+entrada = list("ABC")
+combs = []
+visitados = []
 
 for i in range(0, len(entrada)):
-    print(gera_combs(entrada[i:]))
+    remove_letra(entrada[i:],visitados)
+
+print(visitados)
