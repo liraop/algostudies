@@ -6,23 +6,35 @@ import unittest
 
 def comparaString(s1, s2):
         diferenca = abs(len(s1)-len(s2))
-        if(diferenca > 1):
+
+        if (diferenca > 1):
+            return False
+
+        if (s1 == s2):
+            return True
+
+        menor = s1 if len(s1) < len(s2) else s2
+
+        diferentes = 0
+
+        for i in range(0, len(menor)):
+            if (s1[i] != s2[i]):
+                diferentes += 1
+
+        iguais = (len(menor) - diferentes)
+
+        if (iguais + diferentes + 1 != len(menor)+1 or iguais == diferentes):
             return False
         else:
-            falta = 0
-            if (diferenca == 1): falta += 1 			## se precisar inserir uma
- 
-            for i in range(0, min(len(s1),len(s2))): 
-                if (s1[i] != s2[i]): falta += 1 		## se existir alguma diferença
- 		
-            return (falta <= 1)
+            return True
+
 
 
 class Testes(unittest.TestCase):
 	def test_Base(self):
 		self.assertTrue(comparaString("pele","pele"))
 		self.assertFalse(comparaString("aheuash","aheuasheuas"))
-		
+
 	def test_Passa(self):
 		self.assertTrue(comparaString("pele","ple"))
 		self.assertTrue(comparaString("pele","bele"))
